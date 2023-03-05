@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire Ahmed Chtourou GT3</title>
+    <style>
+        * {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 18px;
+        }
+
+        body {
+            background:linear-gradient(rgb(6, 6, 6),rgb(122, 205, 33)), rgba(69, 69, 74, 0.863);
+            font-size: 15px;
+        }
+
+        .texte {
+            color: rgb(247, 247, 247);
+            text-transform: capitalize;
+            font-weight: bold;
+        }
+
+        button, #submit {
+            padding: 10px;
+            font-size: 20px;
+            width: 105px;
+            margin-top: 20px;
+            background-color: #94f6ff;
+            color: rgb(71, 71, 69);
+            border: 3px solid rgb(59, 10, 221);
+            border-radius: 15px;
+            box-shadow: 3px 3px 3px 3px rgb(46, 118, 212);
+            margin-left: 10px;
+            cursor: pointer;
+            text-transform: capitalize;
+            font-weight: bold;
+            letter-spacing: 2px;
+            transition: 1s
+        }
+
+        button:hover, #submit:hover {
+            background-color: rgb(35, 18, 218);
+            color: rgb(27, 22, 176);
+        }
+
+        legend {
+            color: rgb(223, 113, 113);
+            text-transform: uppercase;
+        }
+
+        input[type='text'] {
+            transition: 2s;
+            width: 320px;
+            border: 1px solid rgb(228, 252, 144);
+        }
+
+        input[type='text']:focus {
+            background-color: rgb(218, 218, 162);
+            color: rgb(236, 212, 212);
+            width: 500px;
+            height: 40px;
+            border-radius: 15px;
+        }
+
+        #principale tr td{
+            padding: 10px;
+            width: 500px;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        table tr td{
+            border: 1px solid gray;  
+        }
+
+        #tab {
+            margin-top: 25px;
+            background-color: lightblue;
+            display:none; 
+        }
+
+        #tab td {
+            padding: 10px;
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <form>
+        <fieldset>
+            <legend class="texte">formulaire</legend>
+            <table id="principale">
+                <tr>
+                    <td class="texte">nom : *</td>
+                    <td><input type="text" id="nom" placeholder="Insérer ton nom"></td>
+                </tr>
+                <tr>
+                    <td class="texte" required>prénom : *</td>
+                    <td><input type="text" id="prenom" placeholder="Insérer ton prénom"></td>
+                </tr>
+                <tr>
+                    <td class="texte">genre :</td>
+                    <td>
+                        <table>
+                            <tr>
+                                <td><input type="radio" name="genre" id="" value="homme"></td>
+                                <td class="texte">homme</td>
+                            </tr>
+                            <tr>
+                                <td><input type="radio" name="genre" id="" value="femme"></td>
+                                <td class="texte">femme</td>
+                            </tr>
+                            <tr>
+                                <td><input type="radio" name="genre" id="" value="autre"></td>
+                                <td class="texte">autre</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="texte">filière d'ingénierie</td>
+                    <td>
+                        <table>
+                            <tr>
+                                <td><input type="radio" name="ingenierie" value="génie télécomunications"></td>
+                                <td class="texte">génie télécomunications</td>
+                            </tr>
+                            <tr>
+                                <td><input type="radio" name="ingenierie" value="génie informatique industrielle"></td>
+                                <td class="texte">génie informatique industrielle</td>
+                            </tr>
+                            <tr>
+                                <td><input type="radio" name="ingenierie" value="ingénieurie des données et systémes décisionels"></td>
+                                <td class="texte">ingénieurie des données et systémes décisionels</td>
+                            </tr>
+                            <tr>
+                                <td><input type="radio" name="ingenierie" value="génie électrique et comunication"></td>
+                                <td class="texte">génie électrique et comunication</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            
+              
+               
+                <tr>
+                    <td class="texte">niveau d'études :</td>
+                    <td>
+                        <table>
+                            <tr>
+                                <td><input type="radio" name="niveau" value="1ere annee"></td>
+                                <td class="texte">1ère année</td>
+                            </tr>
+                            <tr>
+                                <td><input type="radio" name="niveau" value="2eme annee"></td>
+                                <td class="texte">2ème année</td>
+                            </tr>
+                            <tr>
+                                <td><input type="radio" name="niveau" value="3eme annee"></td>
+                                <td class="texte">3ème année</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                      <tr>
+                    <td class="texte">diplome 2 :</td>
+                    <td>
+                        <table>
+                            <tr>
+                                <td><input type="radio" name="diplome2" value="cycle préparatoire"></td>
+                                <td class="texte">cycle préparatoire</td>
+                            </tr>
+                            <tr>
+                                <td><input type="radio" name="diplome2" value="licence"></td>
+                                <td class="texte">licence</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                
+                    <td class="texte">Bac :</td>
+                    <td>
+                        <table>
+                            <tr>
+                                <td><input type="radio" value="bac tunisien" name="diplome1"></td>
+                                <td class="texte">bac tunisien</td>
+                            </tr>
+                            <tr>
+                                <td><input type="radio" value="bac français" name="diplome1"></td>
+                                <td class="texte">bac français</td>
+                            </tr>
+                            <tr>
+                                <td><input type="radio" value="bac canadien" name="diplome1"></td>
+                                <td class="texte">bac canadien</td>
+                            </tr>
+
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="texte">Avez vous des projet technique en  ?</td>
+                    <td>
+                        <table>
+                            <tr>
+                                <td><input type="radio" name="competancest" value="intelligence artificiel "></td>
+                                <td class="texte">IA</td>
+                            </tr>
+                            <tr>
+                                <td><input type="radio" name="competancest" value="developpement web et mobile "></td>
+                                <td class="texte">DEV</td>
+                            </tr>
+                            <tr>
+                                <td><input type="radio" name="competancest" value="blochchain"></td>
+                                <td class="texte">BLOCHCHAIN</td>
+                            </tr>
+                            <tr>
+                                <td><input type="radio" name="competancest" value="system d'exploitation "></td>
+                                <td class="texte">OS</td>
+                            </tr>
+                            
+                         
+                            
+                        </table>
+                        
+                        <tr>
+                            <td>
+                                <select name="pays">
+                                    <option value="France" selected="selected">France </option>
+                                    
+                                    <option value="Afghanistan">Afghanistan </option>
+                                    <option value="Afrique_Centrale">Afrique_Centrale </option>
+                                    <option value="Afrique_du_sud">Afrique_du_Sud </option>
+                                    <option value="Albanie">Albanie </option>
+                                    <option value="Algerie">Algerie </option>
+                                    <option value="Allemagne">Allemagne </option>
+                                    <option value="Andorre">Andorre </option>
+                                    <option value="Angola">Angola </option>
+                                <select name="pays">
+                            
+                                   
+                                 
+                                 
+                
+                            
+                            </td>
+                            
+                          </tr>
+                          <td class="texte">Votre gouts</td>
+                          <td>
+                              <table>
+                                  <tr>
+                                      <td><input type="radio" name="gouts" value="tarte aux fraises a la créme d amende "></td>
+                                       
+                                      <td class="texte">tarte aux fraises a la créme d amende</td>
+                                  </tr>
+                                 
+                                  <tr>
+                                      <td><input type="radio" name="gouts" value="tarte aux prunes  "></td>
+                                      
+                                      <td class="texte">tarte aux prunes</td>
+                                  </tr>
+                                  <tr>
+                                      <td><input type="radio" name="ingenierie" value="tarte rustiques aux mirabelles de lorainne, noisette et miel  "></td>
+                                      
+                                      <td class="texte">tarte rustiques aux mirabelles de lorainne, noisette et miel  </td>
+                                  </tr>
+                              </table>
+                          </td>
+                        
+   
+                      </tr>
+                    </td>
+                    
+                </tr>
+            </table>
+            <td>
+                
+                    </td>
+                </tr>
+            </table>
+    
+            <button type="reset">reset</button>
+            <input type="button" id="submit" value="submit">
+        </fieldset>
+    </form>
+
+
+    <table id="tab">
+        <thead>
+            <td>Nom</td>
+            <td>Prénom</td>
+            <td>Bac</td>
+            <td>Diplome 2</td>
+            <td>Genre</td>
+            <td>Ingénierie</td>
+            <td>Niveau d'études</td>
+            <td>competances techniques</td>
+            <td>competances non techniques</td>
+        </thead>
+        <tbody id="tbody"></tbody>
+    </table>
+
+<script>
+    let nom = document.getElementById('nom');
+
+    let prenom = document.getElementById('prenom');
+
+    let submit = document.querySelector('#submit');
+
+    let avis = document.getElementById('avis');
+
+    let data; 
+    data=[];
+
+    let bac = document.getElementsByName('diplome1');
+
+    let diplome2 = document.getElementsByName('diplome2');
+
+    let gender = document.getElementsByName('genre');
+
+    let ingenierie = document.getElementsByName('ingenierie');
+    let gouts = document.getElementsByName('gouts');
+
+    let niveau = document.getElementsByName('niveau');
+
+    let competancest = document.getElementsByName('competancest');
+
+    let competancesnt = document.getElementsByName('competancesnt');
+
+    function getValue(list) {
+        let v;
+        for(let j = 0; j < list.length; j++) {
+            if(list[j].checked == true) {
+                v = list[j].value;
+            }
+        }
+        return v;
+    }
+
+    var x=document.getElementById('tab');
+
+    submit.onclick = function() {
+        if(nom.value.length >= 4 && prenom.value.length >= 4) 
+        {
+            let object = {nom : nom.value, prenom : prenom.value, bac : getValue(bac), diplome_2 : getValue(diplome2), genre : getValue(gender), ingenierie : getValue(ingenierie), nivEtud : getValue(niveau),  competances_techniques: getValue(competancest), competances_non_techniques: getValue(competancesnt)};
+            
+            data.push(object);
+
+            x.style.display='block';
+            showData();
+
+        
+
+        } else {
+            alert('vérifier les données');
+        }
+
+    }
+
+    
+
+    function showData() {
+        let table = '';
+        for(let i = 0; i < data.length; i++) {
+            table += `
+            <tr>
+                <td>${data[i].nom}</td>
+                <td>${data[i].prenom}</td>
+                <td>${data[i].bac}</td>
+                <td>${data[i].diplome_2}</td>
+                <td>${data[i].genre}</td>
+                <td>${data[i].ingenierie}</td>
+                <td>${data[i].nivEtud}</td>
+                <td>${data[i].Competances_techniques}</td>
+                <td>${data[i].Competances_non_techniques}</td>
+            </tr>
+            `;
+        }
+        document.getElementById('tbody').innerHTML = table;
+         
+    
+    }
+
+</script>
+</body>
+</html>
